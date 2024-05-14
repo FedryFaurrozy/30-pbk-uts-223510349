@@ -7,6 +7,17 @@
       @keydown.enter="addTodo"
     />
     <div class="filter-container">
+<<<<<<< HEAD
+      <button :class="{ active: filter === 'all' }" @click="filter = 'all'">
+        Semua
+      </button>
+      <button
+        :class="{ active: filter === 'pending' }"
+        @click="filter = 'pending'"
+      >
+        Belum Selesai
+      </button>
+=======
       <label for="filter-all">Semua</label>
       <input
         type="radio"
@@ -24,6 +35,7 @@
         v-model="filter"
         value="pending"
       />
+>>>>>>> a366d0e045f979b231dc5fd9f74ce7443c87f120
     </div>
     <ul>
       <todo-item
@@ -32,6 +44,10 @@
         :todo="todo"
         @toggle-done="toggleDone(index)"
         @delete-todo="deleteTodo(index)"
+<<<<<<< HEAD
+        @edit-todo="editTodo(index, $event)"
+=======
+>>>>>>> a366d0e045f979b231dc5fd9f74ce7443c87f120
       />
     </ul>
   </div>
@@ -52,7 +68,11 @@ export default {
         { id: 3, text: "Minum kopi", done: true },
       ],
       newTodo: "",
+<<<<<<< HEAD
+      filter: "pending", // Setel filter default ke 'pending'
+=======
       filter: "all",
+>>>>>>> a366d0e045f979b231dc5fd9f74ce7443c87f120
     };
   },
   computed: {
@@ -77,6 +97,14 @@ export default {
     deleteTodo(index) {
       this.todos.splice(index, 1);
     },
+<<<<<<< HEAD
+    editTodo(index, newText) {
+      if (newText.trim()) {
+        this.todos[index].text = newText;
+      }
+    },
+=======
+>>>>>>> a366d0e045f979b231dc5fd9f74ce7443c87f120
   },
 };
 </script>
@@ -105,7 +133,20 @@ export default {
   margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
+.filter-container button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.filter-container .active {
+  background-color: #ccc;
+=======
 .filter-container label {
   margin-right: 10px;
+>>>>>>> a366d0e045f979b231dc5fd9f74ce7443c87f120
 }
 </style>
