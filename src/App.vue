@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <div>
     <header>
       <nav>
@@ -43,11 +42,6 @@
     <footer>
       <p>Dikembangkan oleh fedry faurrozy</p>
     </footer>
-=======
-  <div class="app">
-    <h1>Aplikasi To-Do List</h1>
-    <todo-list />
->>>>>>> a366d0e045f979b231dc5fd9f74ce7443c87f120
   </div>
 </template>
 
@@ -58,7 +52,6 @@ export default {
   components: {
     TodoList,
   },
-<<<<<<< HEAD
   data() {
     return {
       posts: [],
@@ -97,18 +90,9 @@ export default {
       }
     },
   },
-=======
->>>>>>> a366d0e045f979b231dc5fd9f74ce7443c87f120
 };
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 @import "./style.css";
-=======
-.app {
-  text-align: center;
-  font-family: sans-serif;
-}
->>>>>>> a366d0e045f979b231dc5fd9f74ce7443c87f120
 </style>
